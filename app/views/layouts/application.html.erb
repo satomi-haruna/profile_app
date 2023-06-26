@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ProfileApp</title>
+    <title>Profile App</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="utf-8">
     <%= csrf_meta_tags %>
@@ -11,6 +11,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer class="footer">
+      <p>user name's portfolio site</p>
+    </footer>
   </body>
 </html>
