@@ -26,13 +26,22 @@
   }
 }
 
+.header-btn {
+  height: 53px;
+  border-radius: 4px;
+  padding: 16px 40px;
+  background-color: #fff;
+}
+
 .login {
-  .btn {
+  .header-btn {
     width: 152px;
-    height: 53px;
-    border-radius: 4px;
-    padding: 16px 40px;
-    background-color: #fff;
+  }
+}
+
+.logout {
+  .header-btn {
+    width: 170px;
   }
 }
 
