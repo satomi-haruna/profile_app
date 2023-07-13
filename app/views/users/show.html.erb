@@ -1,5 +1,19 @@
-<h1>user show</h1>
-<p>top-loggedin</p>
-
-<%= @user.name %>
-<%= @user.email %>
+<!--main top-loggedIn users/show-->
+<div class="row profile">
+  <div class="col avatar">
+    <!--%= @user.image_id %>-->
+  </div>
+  <div class="col content">
+    <div class="title">自己紹介</div>
+    <%= @user.name %><%= @user.email %>
+    <div class="text"><%= @user.introduction %></div>
+    <%= link_to "自己紹介を編集する", edit_user_path(current_user), class: "btn btn-lg" %>
+  </div>
+</div>
+<div class="row chart">
+  <div class="col skill">
+    <div class="title">スキルチャート</div>
+    <%= link_to "スキルを編集する", "#", class: "btn btn-lg" %>
+    <div class="chart">図表</div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<h1>自己紹介を編集する</h1>
+
+<div class="row">
+  <div class="col">
+    <%= form_with(model: @user) do |f| %>
+      <%= render "shared/error_messages" %>
+      
+      
+      <%= f.label "自己紹介文" %>
+      <%= f.text_area :introduction, class: "form_control" %>
+      <p>200文字以上、800文字未満で入力してください</p>
+
+      <%= f.label "アバター画像" %>
+      <%= f.file_field :image_id, class: "form-control", accept: "image/*" %>
+
+      <%= f.submit "自己紹介を確定する", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
