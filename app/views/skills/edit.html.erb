@@ -1,0 +1,36 @@
+<% category_number = Array[1, 2, 3] %>
+<% category_number.each do |number| %>
+<div class="by_category">
+  <div class="row">
+    <div class="category_name">
+      <% category = Category.find_by(id: number) %>
+      <%= category.category_name %>
+    </div>
+    <div class="new_skill">
+      <%= link_to "スキルを追加する", new_skill_path, class: "btn btn-primry" %>
+    </div>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>習得スキル</th>
+        <th>習得レベル</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% skills = Skill.where(category_id: number) %>
+      <% skills.each do |skill| %>
+      <tr>
+        <td><%= skill.skill_name %></td>
+        <td><%= skill.level %></td>
+        <td>習得レベル保存ぼたん</td>
+        <td>スキル削除ぼたん</td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<% end %>

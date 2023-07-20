@@ -51,7 +51,7 @@
   width: 100%;
   height: 1278px;
   padding: 80px 0px;
-  background-color: #ff00ff;
+  background-color: #ddff99;
 }
 
 .profile {
@@ -126,4 +126,21 @@
   .form-control {
     color: $state-danger-text;
   }
+}
+
+/* skill-edit */
+
+.by_category {
+  border: solid 1px #555;
+  border-radius: 10px;
+  margin: 30px;
+  padding: 30px;
+  .row {
+    display: flex;
+  }
+}
+
+.category_name {
+  width: 200px;
+  border-bottom: solid 2px #ff00ff;
 }
