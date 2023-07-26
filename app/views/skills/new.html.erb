@@ -1,4 +1,8 @@
-<h1>{カテゴリー名}にスキルを追加</h1>
+<!--main skill-new skills/new-->
+<div class="skill-new-title">
+  {カテゴリー名}にスキルを追加
+</div>
+
 <%= form_with model: @skill do |f| %>
   <%= f.label "習得スキル" %>
   <%= f.text_field :skill_name, class: "form-control" %>

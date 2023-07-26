@@ -1,6 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* 全体*/
+// font: Roboto;
+
 /* header */
 
 .header {
@@ -15,11 +18,9 @@
 
 #logo {
   height: 42px;
-  font: Roboto;
   font-weight: 700;
   font-size: 36px;
   color: #fff;
-  font-weight: 700;
   &:hover {
   color: #fff;
   text-decoration: none;
@@ -47,12 +48,160 @@
 
 /* main */
 
-.main{
-  width: 100%;
-  height: 1278px;
-  padding: 80px 0px;
-  background-color: #ddff99;
+/* login = sessions/new */
+.login-title {
+  width: 144px;
+  height: 48px;
+  // margin-top: 200px;
+  // margin-left: 648px;
+  margin: 200px auto 0;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 48.02px;
+  text-align: center;
 }
+
+.login-form {
+  width: 480px;
+  height: 245px;
+  margin: 128px auto 0;
+  display: flex;
+  gap: 48px;
+  font-weight: 400;
+}
+
+.text-field-box {
+  height: 48px;
+  gap: 10px;
+}
+
+.input-box {
+  width: 480px;
+  gap: 3px;
+}
+
+.input {
+  letter-spacing: 0.15px;
+}
+
+.label {
+  height: 12px;
+  gap: 10px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #000;
+  padding: 0;
+}
+
+.form_content {
+  width: 480px;
+  height: 19px;
+  font-size: 16px;
+  line-height: 19px;
+  // color: #000;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+  opacity: 42%;
+}
+
+.button-blue {
+  width: 268px;
+  height: 53px;
+  border-radius: 4px;
+  background-color: #1B5678;
+  margin: 30px auto;
+  .btn {
+    // width: 108px;
+    // height: 21px;
+    font-size: 18px;
+    line-height: 21.09px;
+    padding: 16px 80px;
+    color: #fff;
+    background: transparent;
+  }
+}
+
+/* profile-edit = users/show */
+.edit-title {
+  width: 324px;
+  height: 48px;
+  // margin-top: 200px;
+  // margin-left: 648px;
+  margin: 200px auto 0;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 48.02px;
+  text-align: center;
+}
+
+.profile-edit-form {
+  width: 480px;
+  height: 342px;
+  margin: 128px auto 0;
+  display: flex;
+  gap: 48px;
+  font-weight: 400;
+}
+
+.inrtoduction {
+  height: 145px;
+  gap: 3px;
+}
+
+.introduction-content {
+  width: 480px;
+  height: 95px;
+  font-size: 18px;
+  line-height: 19px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+
+.helper-text {
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  // color: #000;
+}
+
+.button-gray {
+  width: 202px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: gray;
+  margin: 30px auto;
+  .btn {
+    // width: 108px;
+    // height: 21px;
+    font-size: 14px;
+    line-height: 16.41px;
+    padding: 16px 80px;
+    color: #000;
+  }
+}
+
+
+
+
+
+/* skill-new = skills/new */
+.skill-new-title {
+  width: 502px;
+  height: 48px;
+  // margin-top: 200px;
+  // margin-left: 648px;
+  margin: 200px auto 0;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 48.02px;
+  text-align: center;
+}
+
+
+
 
 .profile {
   width: 100%;
@@ -69,7 +218,6 @@
     .title {
       width: 240px;
       height: 58px;
-      font: Roboto;
       font-weight: 700;
       font-size: 36px;
       line-height: 42.19px;
@@ -78,7 +226,6 @@
     .text {
       width: 520px;
       height: 27px;
-      font: Roboto;
       font-weight: 400;
       font-size: 18px;
       line-height: 27px;
