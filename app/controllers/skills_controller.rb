@@ -3,17 +3,21 @@ class SkillsController < ApplicationController
 
   def new
     @skill = current_user.skills.build
+    @category_id = params[:category_id]
+    @category = Category.find(@category_id)
   end
 
   def create
     @skill = current_user.skills.build(skill_params)
-    @skill.save
-    #   flash[:success] = "Save"
-    redirect_to root_path(@user)
-    # else
-    #   flash[:success] = "Miss"
-    #   render new_skill_path, status: :unprocessable_entity
-    # end
+    @category_id = params[:category_id]
+    @category = Category.find(@category_id)
+    if @skill.save
+      flash.now[:success] = "Save"
+      redirect_to edit_skill_path(current_user)
+    else
+      flash.now[:danger] = "Miss"
+      render new_skill_path, status: :unprocessable_entity
+    end
   end
 
   def edit
