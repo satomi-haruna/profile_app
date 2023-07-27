@@ -27,7 +27,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:introduction)
+      params.require(:user).permit(:introduction, :image_id)
     end
 
     # ログイン済みかどうか　beforeフィルタで使用

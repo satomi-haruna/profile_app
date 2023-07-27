@@ -202,11 +202,23 @@
 
 
 
+/* top = static_pages/home */
+.avatar-top {
+  background-color: #C4C4C4;
+}
+
+/* top-loggedIn = users/show */
+.avatar {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+}
+
+
 
 .profile {
   width: 100%;
   height: 360px;
-  background-color: red;
   display: flex;
   .avator {
     background-color: orange;

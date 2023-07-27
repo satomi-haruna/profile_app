@@ -3,11 +3,12 @@ User.create!(name:  "Sato",
              email: "satomi.haruna1124@gmail.com",
              password:              "ss4649hh00",
              password_confirmation: "ss4649hh00",
-             introduction: "自己紹介を入力しましょう")
+             introduction: "自己紹介を入力しましょう!",
+             image_id: "duck.jpg")
 
 # カテゴリーは3種類
 Category.create!(category_name: "バックエンド")
-Category.create!(category_namcategorye: "フロントエンド")
+Category.create!(category_name: "フロントエンド")
 Category.create!(category_name: "インフラ")
 
 # スキル サンプルデータ
