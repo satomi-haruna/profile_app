@@ -11,6 +11,7 @@ class SkillsController < ApplicationController
     @skill = current_user.skills.build(skill_params)
     @category_id = params[:category_id]
     @category = Category.find(@category_id)
+    @skill.category_id = @category_id
     if @skill.save
       flash.now[:success] = "Save"
       redirect_to edit_skill_path(current_user)
