@@ -3,14 +3,12 @@ class SkillsController < ApplicationController
 
   def new
     @skill = current_user.skills.build
-    @category_id = params[:category_id]
-    @category = Category.find(@category_id)
+    category_params
   end
 
   def create
     @skill = current_user.skills.build(skill_params)
-    @category_id = params[:category_id]
-    @category = Category.find(@category_id)
+    category_params
     @skill.category_id = @category_id
     if @skill.save
       flash.now[:success] = "Save"
@@ -22,8 +20,6 @@ class SkillsController < ApplicationController
   end
 
   def edit
-    # @skills = Skill.where(category_id: 1)
-    # @skill = current_user.skills.find(params[:id])
   end
 
   def update
@@ -36,6 +32,11 @@ class SkillsController < ApplicationController
 
     def skill_params
       params.require(:skill).permit(:skill_name, :level)
+    end
+
+    def category_params
+      @category_id = params[:category_id]
+      @category = Category.find(@category_id)
     end
 
     # # 正しいユーザーかどうか確認
