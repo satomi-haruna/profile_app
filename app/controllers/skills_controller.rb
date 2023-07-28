@@ -11,7 +11,7 @@ class SkillsController < ApplicationController
     category_params
     @skill.category_id = @category_id
     if @skill.save
-      flash.now[:success] = "Save"
+      flash[:success] = "Save"
       redirect_to edit_skill_path(current_user)
     else
       flash.now[:danger] = "Miss"
