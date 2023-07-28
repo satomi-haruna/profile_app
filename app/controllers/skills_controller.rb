@@ -20,12 +20,17 @@ class SkillsController < ApplicationController
   end
 
   def edit
+    @user = current_user
   end
 
   def update
   end
 
   def destroy
+    @skill = Skill.find(params[:id])
+    @skill.destroy
+    flash[:success] = "該当スキルを削除しました。"
+    redirect_to request.referrer, status: :see_other
   end
 
   private

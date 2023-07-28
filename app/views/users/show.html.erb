@@ -8,7 +8,6 @@
   </div>
   <div class="col content">
     <div class="title">自己紹介</div>
-    <%= @user.name %><%= @user.email %>
     <div class="text"><%= @user.introduction %></div>
     <%= link_to "自己紹介を編集する", edit_user_path(current_user), class: "btn btn-lg" %>
   </div>
