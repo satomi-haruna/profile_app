@@ -35,7 +35,8 @@
           <td>
             <% if current_user?(@user) %>
               <%= link_to "スキルを削除する", skill, data: { "turbo-method": :delete,
-                                                              turbo_confirm: "本当に削除しますか？" } %>
+                                                              turbo_confirm: "本当に削除しますか？" },
+                                                              "data-toggle": "modal", "data-target": "#deleteModal" %>
             <% end %>
           </td>
         </tr>
@@ -45,3 +46,6 @@
   </table>
 </div>
 <% end %>
+
+<!--モーダルウィンドウ-->
+<!--%= render 'skills/modal_delete' %> <!--{ skill: skill, action_name: delete }-->-->
