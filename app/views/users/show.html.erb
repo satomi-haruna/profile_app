@@ -16,6 +16,10 @@
   <div class="col skill">
     <div class="title">スキルチャート</div>
     <%= link_to "スキルを編集する", edit_skill_path(current_user), class: "btn btn-lg" %>
-    <div class="chart">図表</div>
+    <div class="chart">図表
+
+      <%= column_chart Skill.group(:skill_name).sum(:level) %>
+
+    </div>
   </div>
 </div>

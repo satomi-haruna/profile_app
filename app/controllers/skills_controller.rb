@@ -24,15 +24,19 @@ class SkillsController < ApplicationController
 
   def edit
     @user = current_user
+    @backend_skills = Skill.where(user_id: current_user.id).where(category_id: 1)
+    @frontend_skills = Skill.where(user_id: current_user.id).where(category_id: 2)
+    @infra_skills = Skill.where(user_id: current_user.id).where(category_id: 3)
   end
 
   def update
-    # if @skill.update(skill_params)
-    #   flash[:success] = "#{@skill.skill_name} の習得レベルを保存しました！"
-    # else
-    #   flash.now[:danger] = "習得レベルの更新に失敗しました。"
-    #   render edit_skill_path, status: :unprocessable_entity
-    # end
+    @skill = Skill.find(params[:id])
+    if @skill.update(skill_params)
+      flash[:success] = "#{@skill.skill_name} の習得レベルを保存しました！"
+    else
+      flash.now[:danger] = "習得レベルの更新に失敗しました。"
+      render edit_skill_path, status: :unprocessable_entity
+    end
   end
 
   def destroy
