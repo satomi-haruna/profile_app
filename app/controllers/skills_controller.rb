@@ -27,6 +27,12 @@ class SkillsController < ApplicationController
   end
 
   def update
+    # if @skill.update(skill_params)
+    #   flash[:success] = "#{@skill.skill_name} の習得レベルを保存しました！"
+    # else
+    #   flash.now[:danger] = "習得レベルの更新に失敗しました。"
+    #   render edit_skill_path, status: :unprocessable_entity
+    # end
   end
 
   def destroy

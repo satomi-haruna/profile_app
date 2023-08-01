@@ -1,6 +1,6 @@
 <!--main skill-edit skills/edit-->
-<% category_number = Array[1, 2, 3] %>
-<% category_number.each do |number| %>
+<% category_numbers = Array[1, 2, 3] %>
+<% category_numbers.each do |number| %>
 <div class="by_category">
   <div class="row">
     <div class="category_name">
@@ -22,9 +22,9 @@
       </tr>
     </thead>
     <tbody>
-      <%= form_with model: @skill do |f| %>
-        <% skills = Skill.where(category_id: number) %>
-        <% skills.each do |skill| %>
+      <% skills = Skill.where(category_id: number) %>
+      <% skills.each do |skill| %>
+        <%= form_with model: skill, local: true do |f| %>
         <tr>
           <td><%= skill.skill_name %></td>
           <td><%= f.select :level, [[0, 0], [10, 10], [20, 20], [30, 30], [40, 40], [50, 50],
@@ -48,4 +48,4 @@
 <% end %>
 
 <!--モーダルウィンドウ-->
-<!--%= render 'skills/modal_delete' %> <!--{ skill: skill, action_name: delete }-->-->
+<!--%= render 'skills/modal_delete' %> <!--{ skill: skill, action_name: delete }-->
