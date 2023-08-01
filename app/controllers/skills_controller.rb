@@ -24,9 +24,6 @@ class SkillsController < ApplicationController
 
   def edit
     @user = current_user
-    @backend_skills = Skill.where(user_id: current_user.id).where(category_id: 1)
-    @frontend_skills = Skill.where(user_id: current_user.id).where(category_id: 2)
-    @infra_skills = Skill.where(user_id: current_user.id).where(category_id: 3)
   end
 
   def update
