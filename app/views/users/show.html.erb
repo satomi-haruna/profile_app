@@ -1,25 +1,33 @@
 <!--main top-loggedIn users/show-->
-<div class="row profile">
-  <div class="col">
-    <!--%= link_to image_tag("duck.jpg", alt: "Rails logo", width: "360", id: "avatar-img") %>-->
+<div class="container">
+  <div class="row profile">
+    <div class="col">
+      <!--%= link_to image_tag("duck.jpg", alt: "Rails logo", width: "360", id: "avatar-img") %>-->
 
-    <!--imagemagickで画像表示-->
-    <%= image_tag @user.image_id.url, :size => '360x360', class: "avatar" %>
+      <!--imagemagickで画像表示-->
+      <%= image_tag @user.image_id.url, :size => '360x360', class: "avatar" %>
+    </div>
+    <div class="col content">
+      <div class="title">自己紹介</div>
+      <div class="user-text"><%= @user.introduction %></div>
+      <%= link_to "自己紹介を編集する", edit_user_path(current_user), class: "btn", id: "edit-btn" %>
+    </div>
   </div>
-  <div class="col content">
-    <div class="title">自己紹介</div>
-    <div class="text"><%= @user.introduction %></div>
-    <%= link_to "自己紹介を編集する", edit_user_path(current_user), class: "btn btn-lg" %>
-  </div>
-</div>
-<div class="row chart">
-  <div class="col skill">
-    <div class="title">スキルチャート</div>
-    <%= link_to "スキルを編集する", edit_skill_path(current_user), class: "btn btn-lg" %>
-    <div class="chart">図表
+  <div class="row chart">
+    <div class="col">
+      <div class="row user-chart">
+        <div class="title">スキルチャート</div>
+        <div class="edit-btn">
+          <%= link_to "スキルを編集する", edit_skill_path(current_user), class: "btn skii-edit-btn", id: "edit-btn" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="skill-chart">図表
 
-      <%= column_chart Skill.group(:skill_name).sum(:level) %>
+          <%= column_chart Skill.group(:skill_name).sum(:level) %>
 
+        </div>
+      </div>
     </div>
   </div>
 </div>

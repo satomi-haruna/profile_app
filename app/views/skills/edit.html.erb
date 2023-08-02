@@ -1,48 +1,50 @@
 <!--main skill-edit skills/edit-->
-<% category_numbers = Array[1, 2, 3] %>
-<% category_numbers.each do |number| %>
-<div class="by_category">
-  <div class="row">
-    <div class="category_name">
-      <% category = Category.find_by(id: number) %>
-      <%= category.category_name %>
+<div class="container">
+  <% category_numbers = Array[1, 2, 3] %>
+  <% category_numbers.each do |number| %>
+  <div class="by_category">
+    <div class="row">
+      <div class="category_name">
+        <% category = Category.find_by(id: number) %>
+        <%= category.category_name %>
+      </div>
+      <div class="new_skill">
+        <%= link_to "スキルを追加する", new_skill_path(category_id: number), class: "btn btn-primry" %>
+      </div>
     </div>
-    <div class="new_skill">
-      <%= link_to "スキルを追加する", new_skill_path(category_id: number), class: "btn btn-primry" %>
-    </div>
-  </div>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th>習得スキル</th>
-        <th>習得レベル</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% skills = Skill.where(category_id: number) %>
-      <% skills.each do |skill| %>
-        <%= form_with model: skill, local: true do |f| %>
+    <table class="table">
+      <thead>
         <tr>
-          <td><%= skill.skill_name %></td>
-          <td><%= f.select :level, [[0, 0], [10, 10], [20, 20], [30, 30], [40, 40], [50, 50],
-                        [60, 60], [70, 70], [80, 80], [90, 90], [100, 100]] %></td>
-          <td>
-            <%= f.submit "習得レベルを保存する", class: "btn btn-primary" %>
-          </td>
-          <td>
-            <% if current_user?(@user) %>
-              <%= link_to "スキルを削除する", skill, data: { "turbo-method": :delete,
-                                                              turbo_confirm: "本当に削除しますか？" },
-                                                              "data-toggle": "modal", "data-target": "#deleteModal" %>
-            <% end %>
-          </td>
+          <th>習得スキル</th>
+          <th>習得レベル</th>
+          <th></th>
+          <th></th>
         </tr>
+      </thead>
+      <tbody>
+        <% skills = Skill.where(category_id: number) %>
+        <% skills.each do |skill| %>
+          <%= form_with model: skill, local: true do |f| %>
+          <tr>
+            <td><%= skill.skill_name %></td>
+            <td><%= f.select :level, [[0, 0], [10, 10], [20, 20], [30, 30], [40, 40], [50, 50],
+                          [60, 60], [70, 70], [80, 80], [90, 90], [100, 100]] %></td>
+            <td>
+              <%= f.submit "習得レベルを保存する", class: "btn btn-primary" %>
+            </td>
+            <td>
+              <% if current_user?(@user) %>
+                <%= link_to "スキルを削除する", skill, data: { "turbo-method": :delete,
+                                                                turbo_confirm: "本当に削除しますか？" },
+                                                                "data-toggle": "modal", "data-target": "#deleteModal" %>
+              <% end %>
+            </td>
+          </tr>
+          <% end %>
         <% end %>
-      <% end %>
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+  </div>
+  <% end %>
 </div>
-<% end %>

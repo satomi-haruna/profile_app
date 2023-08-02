@@ -3,11 +3,11 @@
   <% if logged_in? %>
     <div class="logout">
       <%= link_to "ログアウト", logout_path, data: { "turbo-method": :delete },
-                                class: "header-btn btn-lg" %>
+                                class: "btn header-btn" %>
     </div>
   <% else %>
     <div class="login">
-      <%= link_to "ログイン", login_path, class: "btn btn-lg" %>
+      <%= link_to "ログイン", login_path, class: "btn header-btn" %>
     </div>
   <% end %>
 </header>

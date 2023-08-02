@@ -27,26 +27,41 @@
   }
 }
 
-.header-btn {
-  height: 53px;
-  border-radius: 4px;
-  padding: 16px 40px;
-  background-color: #fff;
-}
-
 .login {
   .header-btn {
     width: 152px;
+    height: 53px;
+    border-radius: 4px;
+    padding: 16px 40px;
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.09px;
+    color: #000;
   }
 }
 
 .logout {
   .header-btn {
     width: 170px;
+    height: 53px;
+    border-radius: 4px;
+    padding: 16px 40px;
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.09px;
+    color: #000;
   }
 }
 
 /* main */
+.main {
+  width: 100%;
+  height: 1278px;
+  // position: absolute;
+  // margin-top: 120px;
+}
 
 /* login = sessions/new */
 .login-title {
@@ -185,8 +200,6 @@
 
 
 
-
-
 /* skill-new = skills/new */
 .skill-new-title {
   width: 502px;
@@ -201,12 +214,6 @@
 }
 
 
-
-/* top = static_pages/home */
-.avatar-top {
-  background-color: #C4C4C4;
-}
-
 /* top-loggedIn = users/show */
 .avatar {
   width: 360px;
@@ -214,15 +221,60 @@
   border-radius: 50%;
 }
 
+.user-text {
+  width: 520px;
+  height: 27px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000;
+}
+
+#edit-btn {
+  width: 242px;
+  height: 53px;
+  padding: 16px 40px;
+  background-color: #1B5678;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.09px;
+  margin-top: 32px;
+}
+
+.chart{
+  .user-chart {
+    width: 400px;
+    height: 151px;
+    margin: 0 auto;
+    .title {
+      width: 400px;
+      height: 58px;
+      margin: 0 auto 16px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 42.19px;
+      border-bottom: 2px solid #000;
+    }
+  }
+}
+
+/* top = static_pages/home */
+.avatar-top {
+  background-color: #C4C4C4;
+}
+
+
+
 
 
 .profile {
   width: 100%;
-  height: 360px;
+  // height: 360px;
+  padding: 80px 0;
+  margin: 0 auto;
   display: flex;
-  .avator {
-    background-color: orange;
-  }
   .content {
     width: 520px;
     height: 117px;
@@ -234,6 +286,7 @@
       font-size: 36px;
       line-height: 42.19px;
       border-bottom: 2px solid #000;
+      margin-bottom: 32px;
     }
     .text {
       width: 520px;
@@ -253,7 +306,28 @@
 .chart {
   width: 100%;
   height: 638px;
-  background-color: blue;
+}
+
+.top-chart {
+  width: 100%;
+  height: 638px;
+  .title {
+    width: 400px;
+    height: 58px;
+    margin: 0 auto 80px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42.19px;
+    border-bottom: 2px solid #000;
+  }
+}
+
+.skill-chart {
+  background-color: lightgray;
+  width: 1046px;
+  height: 500px;
+  margin: 0 auto 80px;
 }
 
 
@@ -302,32 +376,4 @@
 .category_name {
   width: 200px;
   border-bottom: solid 2px #ff00ff;
-}
-
-
-
-
-
-/* モーダルウィンドウ */
-.modal{
-    display: none;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-.modal__bg{
-    background: rgba(0,0,0,0.8);
-    height: 100vh;
-    position: absolute;
-    width: 100%;
-}
-.modal__content{
-    background: #fff;
-    left: 50%;
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    width: 60%;
 }
