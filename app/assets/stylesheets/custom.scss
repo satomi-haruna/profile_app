@@ -10,7 +10,6 @@
   width: 100%;
   height: 120px;
   padding: 0px 40px;
-  margin-bottom: 80px;
   background-color: #1B5678;
   display: flex;
   justify-content: space-between;
@@ -61,7 +60,7 @@
   width: 100%;
   min-height: 100vh;
   // position: absolute;
-  // margin-top: 120px;
+  margin-top: 80px;
 }
 
 /* login = sessions/new */
@@ -283,7 +282,7 @@
     color: darkgray;
   }
   .skill-form{
-    color: darkgray;
+    color: #000;
     width: 560px;
     border: none;
     outline: none;
@@ -291,6 +290,7 @@
     padding: 10px 0;
   }
   select {
+    color: #000;
     margin-bottom: 5px;
     width: 560px;
     border: none;
