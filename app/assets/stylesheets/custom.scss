@@ -255,7 +255,7 @@
 
 /* skill-new = skills/new */
 .skill-new-title {
-  // width: 502px;
+  width: 560px;
   height: 48px;
   position: absolute;
   top: 200px;
@@ -267,7 +267,7 @@
 }
 
 .new-skill-form {
-  width: 480px;
+  width: 560px;
   height: 268px;
   position: absolute;
   top: 328px;
@@ -283,7 +283,7 @@
   }
   .skill-form{
     color: darkgray;
-    width: 480px;
+    width: 560px;
     border: none;
     outline: none;
     border-bottom: 1px solid #000;
@@ -291,7 +291,7 @@
   }
   select {
     margin-bottom: 5px;
-    width: 480px;
+    width: 560px;
     border: none;
     border-bottom: 1px solid #000;
   }
@@ -304,7 +304,8 @@
     font-size: 18px;
     line-height: 21.09px;
     color: #fff;
-    margin-top: 20px;
+    margin: 80px auto 0;
+    display: block;
   }
 }
 
