@@ -1,39 +1,48 @@
 <!--main users-edit users/edit-->
-<div class="edit-title">自己紹介を編集する</div>
+<div class="container">
+  <div class="row">
+    <div class="edit-title">自己紹介を編集する</div>
+  </div>
 
-<div class="profile-edit-form">
-  <%= form_with(model: @user) do |f| %>
-    <!--%= render "shared/error_messages" %>-->
-  <div class="introduction">
-    <div class="input">
-      <div class="label">
-        <%= f.label "自己紹介文" %>
+  <div class="row">
+    <div class="profile-edit-form">
+      <%= form_with(model: @user) do |f| %>
+        <!--%= render "shared/error_messages" %>-->
+      <div class="introduction">
+        <div class="input">
+          <div class="label">
+            <%= f.label "自己紹介文" %>
+          </div>
+          <div class="content">
+            <%= f.text_area :introduction, class: "introduction-content" %>
+          </div>
+        </div>
+        <div class="helper-text">
+          200文字以上、800文字未満で入力してください
+        </div>
+
+        <div class="text-field-box">
+          <div class="input-box">
+            <div class="input">
+              <div class="label">
+                <%= f.label "アバター画像" %>
+              </div>
+              <div class="botton_gray">
+                <label>
+                  <span class="image_label">画像ファイルを添付する</span>
+                  <%= f.file_field :image_id, class: "hidden", accept: "image/*" %>
+                  <!--%= f.hidden_field :image_id_cache %>-->
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="content">
-        <%= f.text_area :introduction, class: "introduction-content" %>
+
+      <div class="button-blue">
+        <%= f.submit "自己紹介を確定する", class: "btn" %>
       </div>
+      <% end %>
     </div>
   </div>
-  <div class="helper-text">
-    200文字以上、800文字未満で入力してください
-  </div>
-
-  <div class="text-field-box">
-    <div class="input-box">
-      <div class="input">
-        <div class="label">
-          <%= f.label "アバター画像" %>
-        </div>
-        <div class="botton_gray">
-          <%= f.file_field :image_id, class: "botton_gray", accept: "image/*" %>
-          <!--%= f.hidden_field :image_id_cache %>-->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="button-blue">
-    <%= f.submit "自己紹介を確定する", class: "btn" %>
-  </div>
-  <% end %>
 </div>

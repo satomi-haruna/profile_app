@@ -67,9 +67,7 @@
 .login-title {
   width: 144px;
   height: 48px;
-  // margin-top: 200px;
-  // margin-left: 648px;
-  margin: 200px auto 0;
+  margin: 100px auto 60px;
   font-weight: 400;
   font-size: 36px;
   line-height: 48.02px;
@@ -79,7 +77,7 @@
 .login-form {
   width: 480px;
   height: 245px;
-  margin: 128px auto 0;
+  margin: 10px auto;
   display: flex;
   gap: 48px;
   font-weight: 400;
@@ -104,7 +102,7 @@
   gap: 10px;
   font-size: 12px;
   line-height: 12px;
-  color: #000;
+  color: darkgray;
   padding: 0;
 }
 
@@ -139,11 +137,12 @@
 
 /* profile-edit = users/show */
 .edit-title {
+  position: absolute;
+  top: 200px;
+  left: 558px;
+  margin: 0 auto;
   width: 324px;
   height: 48px;
-  // margin-top: 200px;
-  // margin-left: 648px;
-  margin: 200px auto 0;
   font-weight: 400;
   font-size: 36px;
   line-height: 48.02px;
@@ -153,15 +152,28 @@
 .profile-edit-form {
   width: 480px;
   height: 342px;
-  margin: 128px auto 0;
+  position: absolute;
+  top: 328px;
+  left: 240px;
+  margin: 0 auto;
   display: flex;
   gap: 48px;
   font-weight: 400;
 }
 
-.inrtoduction {
-  height: 145px;
-  gap: 3px;
+.profile-edit-form {
+  .inrtoduction {
+    .input {
+      height: 145px;
+      margin: 0 auto;
+      .label {
+        padding-bottom: 7px;
+      }
+      .content {
+        padding-bottom: 7px;
+      }
+    }
+  }
 }
 
 .introduction-content {
@@ -170,8 +182,8 @@
   font-size: 18px;
   line-height: 19px;
   border: none;
-  outline: none;
-  border-bottom: 1px solid #000;
+  outline: none;;
+  border-bottom: 2px solid #000;
 }
 
 .helper-text {
@@ -179,7 +191,29 @@
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 0.4px;
-  // color: #000;
+  padding-bottom: 48px;
+  color: darkgray;
+}
+
+.text-field-box {
+  .input-box {
+    .input {
+      .label {
+        margin-bottom: 10px;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.image_label {
+  width: 202px;
+  height: 32px;
+  padding: 8px 24px;
+  background-color: lightgray;
+  border-radius: 4px;
 }
 
 .button-gray {
@@ -198,21 +232,81 @@
   }
 }
 
+.profile-edit-form {
+  .button-blue {
+    width: 322px;
+    height: 53px;
+    border-radius: 4px;
+    background-color: #1B5678;
+    margin: 30px auto;
+    .btn {
+      // width: 108px;
+      // height: 21px;
+      font-size: 18px;
+      line-height: 21.09px;
+      padding: 16px 80px;
+      color: #fff;
+      background: transparent;
+    }
+  }
+}
+
 
 
 /* skill-new = skills/new */
 .skill-new-title {
-  width: 502px;
+  // width: 502px;
   height: 48px;
-  // margin-top: 200px;
-  // margin-left: 648px;
-  margin: 200px auto 0;
+  position: absolute;
+  top: 200px;
+  left: 469px;
   font-weight: 400;
   font-size: 36px;
   line-height: 48.02px;
   text-align: center;
 }
 
+.new-skill-form {
+  width: 480px;
+  height: 268px;
+  position: absolute;
+  top: 328px;
+  left: 480px;
+  margin-bottom: 3px;
+  .text-field-box {
+    margin-bottom: 48px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    letter: 0.15px;
+    color: darkgray;
+  }
+  .skill-form{
+    color: darkgray;
+    width: 480px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+    padding: 10px 0;
+  }
+  select {
+    margin-bottom: 5px;
+    width: 480px;
+    border: none;
+    border-bottom: 1px solid #000;
+  }
+  .btn-blue {
+    width: 232px;
+    height: 53px;
+    border-radius: 4px;
+    padding: 16px 80px;
+    background-color: #1B5678;
+    font-size: 18px;
+    line-height: 21.09px;
+    color: #fff;
+    margin-top: 20px;
+  }
+}
 
 /* top-loggedIn = users/show */
 .avatar {
@@ -223,7 +317,7 @@
 
 .user-text {
   width: 520px;
-  height: 27px;
+  // height: 27px;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
@@ -242,11 +336,15 @@
   margin-top: 32px;
 }
 
+.edit-btn {
+  margin: 0 auto;
+}
+
 .chart{
   .user-chart {
     width: 400px;
     height: 151px;
-    margin: 0 auto;
+    margin: 0 auto 80px;
     .title {
       width: 400px;
       height: 58px;
@@ -264,8 +362,6 @@
 .avatar-top {
   background-color: #C4C4C4;
 }
-
-
 
 
 
@@ -366,14 +462,125 @@
 .by_category {
   border: solid 1px #555;
   border-radius: 10px;
-  margin: 30px;
-  padding: 30px;
+  margin: 40px;
+  // padding: 30px;
   .row {
     display: flex;
+    position: relative;
+    margin: 40px;
   }
 }
 
 .category_name {
-  width: 200px;
-  border-bottom: solid 2px #ff00ff;
+  width: 240px;
+  padding-bottom: 16px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.13px;
+  border-bottom: solid 2px #000;
+  margin-bottom: 32px;
+  position: absolute;
+  left: 0;
+}
+
+.new-skill-btn {
+  width: 192px;
+  height: 48px;
+  border-radius: 4px;
+  background-color: #1B5678;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+  padding: 16px 40px;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  margin-bottom: 32px;
+  .btn {
+    // width: 108px;
+    // height: 21px;
+    background: transparent;
+  }
+}
+
+.table {
+  margin: 32px 0;
+  thead {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter: 0.15px;
+    tr {
+      th {
+        padding: 16px;
+        height: 56px;
+      }
+      .th-left {
+        padding-left: 40px;
+        width: 240px;
+      }
+      .th2 {
+        width: 240px;
+      }
+      .th3 {
+        width: 200px;
+      }
+    }
+  }
+}
+
+.table {
+  tbody {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.02px;
+    letter: 0.15px;
+    tr {
+      td {
+        padding: 16px;
+        height: 56px;
+      }
+      .th-left {
+        padding-left: 40px;
+        width: 240px;
+      }
+      .th2 {
+        width: 240px;
+      }
+      .th3 {
+        width: 200px;
+        padding-top: 20px;
+        .btn-update {
+          width: 172px;
+          height: 32px;
+          border-radius: 4px;
+          padding: 8px 16px;
+          color: #1B5678;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16.41px;
+          background-color: #fff;
+          border: 1px solid #1B5678;
+        }
+        .btn-delete {
+          width: 144px;
+          height: 32px;
+          border-radius: 4px;
+          padding: 8px 16px;
+          color: #fff;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16.41px;
+          background-color: #EE6969;
+        }
+      }
+    }
+  }
+}
+
+select {
+  width: 160px;
+  height: 40px;
+  border-radius: 4px;
+  padding: 10px;
 }
