@@ -1,4 +1,43 @@
 <!--main top-loggedIn users/show-->
+<head>
+  <!--chart-->
+  <%= include_gon %>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1"></script>
+  <script>
+    window.onload = function () {
+      let context = document.querySelector("#japanese_people_chart").getContext('2d')
+      new Chart(context, {
+        type: 'bar',
+        data: {
+          labels: ['先々月', '先月', '今月'],
+          datasets: [{
+            label: "バックエンド",
+            data: [gon.dataset1, 50, 80],
+            backgroundColor: ['#ffbcdd']
+          },{
+            label: "フロントエンド",
+            data: [gon.dataset2, 90, 100],
+            backgroundColor: ['#ffdbb7']
+          },{
+            label: "インフラ",
+            data: [gon.dataset3, 40, 70],
+            backgroundColor: ['#ffffb7']
+          }],
+        },
+        options: {
+          scales: {
+            y: {
+              min: 0,
+              max: 100,
+            }
+          },
+          responsive: false
+        }
+      })
+    }
+  </script>
+</head>
+
 <div class="container">
   <div class="row profile">
     <div class="col">
@@ -22,10 +61,9 @@
         </div>
       </div>
       <div class="row">
-        <div class="skill-chart">図表
-
-          <%= column_chart Skill.group(:skill_name).sum(:level) %>
-
+        <!--chart-->
+        <div class="skill-chart">
+          <canvas id="japanese_people_chart" width="500" height="500"></canvas>
         </div>
       </div>
     </div>

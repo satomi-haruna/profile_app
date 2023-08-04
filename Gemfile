@@ -8,6 +8,7 @@ gem 'carrierwave',     '>= 3.0.0.rc', '< 4.0'
 gem "mini_magick"
 gem "jquery-rails"
 gem 'chartkick'
+gem 'gon'
 gem 'webpacker', github: 'rails/webpacker'
 gem "bcrypt",          "3.1.18"
 gem "bootstrap-sass",  "3.4.1"

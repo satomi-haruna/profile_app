@@ -17,4 +17,9 @@ class User < ApplicationRecord
                                                   BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
+
+  # chart
+  scope :backend, -> { where(category_id: 1) }
+  scope :frontend, -> { where(category_id: 2) }
+  scope :infra, -> { where(category_id: 3) }
 end

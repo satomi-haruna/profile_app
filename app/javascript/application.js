@@ -7,20 +7,3 @@ import "custom/menu"
 //= require_tree .
 require("chartkick")
 require("chart.js")
-
-
-
-// モーダルウィンドウ　Javascript
-// import jquery from "jquery"
-// window.$ = jquery
-
-// jquery(function(){
-//     jquery('.js-modal-open').on('click',function(){
-//         jquery('.js-modal').fadeIn();
-//         return false;
-//     });
-//     jquery('.js-modal-close').on('click',function(){
-//         jquery('.js-modal').fadeOut();
-//         return false;
-//     });
-// });

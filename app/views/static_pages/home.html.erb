@@ -1,4 +1,42 @@
 <!--main top-->
+<head>
+  <!--chart-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1"></script>
+  <script>
+    window.onload = function () {
+      let context = document.querySelector("#japanese_people_chart").getContext('2d')
+      new Chart(context, {
+        type: 'bar',
+        data: {
+          labels: ['先々月', '先月', '今月'],
+          datasets: [{
+            label: "バックエンド",
+            data: [0, 0, 0],
+            backgroundColor: ['#ffbcdd']
+          },{
+            label: "フロントエンド",
+            data: [0, 0, 0],
+            backgroundColor: ['#ffdbb7']
+          },{
+            label: "インフラ",
+            data: [0, 0, 0],
+            backgroundColor: ['#ffffb7']
+          }],
+        },
+        options: {
+          scales: {
+            y: {
+              min: 0,
+              max: 100,
+            }
+          },
+          responsive: false
+        }
+      })
+    }
+  </script>
+</head>
+
 <div class="container">
   <div class="row profile">
     <div class="col">
@@ -14,7 +52,7 @@
       <div class="row top-chart">
         <div class="title">スキルチャート</div>
         <div class="skill-chart">
-          見本グラフ
+          <canvas id="japanese_people_chart" width="500" height="500"></canvas>
         </div>
       </div>
     </div>
