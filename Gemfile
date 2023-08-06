@@ -9,6 +9,8 @@ gem "mini_magick"
 gem "jquery-rails"
 gem 'chartkick'
 gem 'gon'
+gem 'hotwire-rails'
+gem 'redis', '~> 4.0'
 gem 'webpacker', github: 'rails/webpacker'
 gem "bcrypt",          "3.1.18"
 gem "bootstrap-sass",  "3.4.1"
