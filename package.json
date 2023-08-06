@@ -4,7 +4,7 @@
   "dependencies": {
     "@hotwired/turbo-rails": "^7.0.0-beta.5",
     "@rails/webpacker": "^6.0.0-rc.6",
-    "stimulus": "^2.0.0"
+    "stimulus": "^2.0.0",
     "chart.js": "^4.3.3",
     "chartkick": "^5.0.1",
     "webpack": "^5.53.0",
